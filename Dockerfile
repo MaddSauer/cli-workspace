@@ -10,5 +10,5 @@ RUN dnf -y update && \
   dnf -y clean all
 
 USER 1001
-ENTRYPOINT ["/usr/bin/bash"] 
-CMD [ "-c", "trap : TERM INT; sleep infinity & wait" ]
+#ENTRYPOINT ["/usr/bin/bash"] 
+CMD [ "bash", "-c", "trap : TERM INT; sleep infinity & wait" ]
