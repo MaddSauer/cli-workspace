@@ -40,7 +40,7 @@ RUN dnf -y update && \
     zsh && \
   dnf -y clean all
 
-RUN chmod -R 1001 /
+RUN chown -R 1001 /
 
 USER 1001
 #ENTRYPOINT ["/usr/bin/bash"] 
