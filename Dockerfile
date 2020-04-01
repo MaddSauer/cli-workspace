@@ -40,7 +40,7 @@ RUN dnf -y update && \
     zsh && \
   dnf -y clean all
 
-RUN chown -R 1001 /
+RUN find / -x -exec chown  1001 \;
 
 USER 1001
 #ENTRYPOINT ["/usr/bin/bash"] 
